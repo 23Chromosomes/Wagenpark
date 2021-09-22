@@ -1,0 +1,72 @@
+C:\Users\Billy Kuiper\source\repos\ROCit_P31\ROCit_P31\bin\Debug\ROCit_P31.exe.config
+C:\Users\Billy Kuiper\source\repos\ROCit_P31\ROCit_P31\bin\Debug\ROCit_P31.exe
+C:\Users\Billy Kuiper\source\repos\ROCit_P31\ROCit_P31\bin\Debug\ROCit_P31.pdb
+C:\Users\Billy Kuiper\source\repos\ROCit_P31\ROCit_P31\obj\Debug\MainWindow.g.cs
+C:\Users\Billy Kuiper\source\repos\ROCit_P31\ROCit_P31\obj\Debug\App.g.cs
+C:\Users\Billy Kuiper\source\repos\ROCit_P31\ROCit_P31\obj\Debug\ROCit_P31_MarkupCompile.cache
+C:\Users\Billy Kuiper\source\repos\ROCit_P31\ROCit_P31\obj\Debug\ROCit_P31_MarkupCompile.lref
+C:\Users\Billy Kuiper\source\repos\ROCit_P31\ROCit_P31\obj\Debug\MainWindow.baml
+C:\Users\Billy Kuiper\source\repos\ROCit_P31\ROCit_P31\obj\Debug\ROCit_P31.g.resources
+C:\Users\Billy Kuiper\source\repos\ROCit_P31\ROCit_P31\obj\Debug\ROCit_P31.Properties.Resources.resources
+C:\Users\Billy Kuiper\source\repos\ROCit_P31\ROCit_P31\obj\Debug\ROCit_P31.csproj.GenerateResource.cache
+C:\Users\Billy Kuiper\source\repos\ROCit_P31\ROCit_P31\obj\Debug\ROCit_P31.csproj.CoreCompileInputs.cache
+C:\Users\Billy Kuiper\source\repos\ROCit_P31\ROCit_P31\obj\Debug\ROCit_P31.exe
+C:\Users\Billy Kuiper\source\repos\ROCit_P31\ROCit_P31\obj\Debug\ROCit_P31.pdb
+C:\Users\Billy Kuiper\source\repos\ROCit_P31\ROCit_P31\obj\Debug\Base.g.cs
+C:\Users\Billy Kuiper\source\repos\ROCit_P31\ROCit_P31\obj\Debug\Base.baml
+C:\Users\Billy Kuiper\source\repos\ROCit_P31\ROCit_P31\obj\Debug\Overizicht_Lease_Auto.g.cs
+C:\Users\Billy Kuiper\source\repos\ROCit_P31\ROCit_P31\obj\Debug\Overizicht_Lease_Auto.baml
+C:\Users\Billy Kuiper\source\repos\ROCit_P31\ROCit_P31\obj\Debug\AutoToevoegen.g.cs
+C:\Users\Billy Kuiper\source\repos\ROCit_P31\ROCit_P31\obj\Debug\AutoToevoegen.baml
+C:\Users\Billy Kuiper\source\repos\ROCit_P31\ROCit_P31\obj\Debug\PersoneelToevoegen.g.cs
+C:\Users\Billy Kuiper\source\repos\ROCit_P31\ROCit_P31\obj\Debug\PersoneelToevoegen.baml
+C:\Users\Billy Kuiper\source\repos\ROCit_P31\ROCit_P31\obj\Debug\OnderhoudsbeurtUC.g.cs
+C:\Users\Billy Kuiper\source\repos\ROCit_P31\ROCit_P31\obj\Debug\OnderhoudsbeurtUC.baml
+C:\Users\Billy Kuiper\source\repos\ROCit_P31\ROCit_P31\obj\Debug\kostenUC.g.cs
+C:\Users\Billy Kuiper\source\repos\ROCit_P31\ROCit_P31\obj\Debug\kostenUC.baml
+C:\Users\Billy Kuiper\source\repos\ROCit_P31\ROCit_P31\obj\Debug\welkomUC.g.cs
+C:\Users\Billy Kuiper\source\repos\ROCit_P31\ROCit_P31\obj\Debug\welkomUC.baml
+C:\Users\Billy Kuiper\source\repos\ROCit_P31\ROCit_P31\obj\Debug\AddWorkplace.g.cs
+C:\Users\Billy Kuiper\source\repos\ROCit_P31\ROCit_P31\obj\Debug\AddWorkplace.baml
+C:\Users\Billy Kuiper\source\repos\ROCit_P31\ROCit_P31\obj\Debug\DealerOpvagenUC.g.cs
+C:\Users\Billy Kuiper\source\repos\ROCit_P31\ROCit_P31\obj\Debug\DealerOpvagenUC.baml
+C:\Users\Billy Kuiper\source\repos\ROCit_P31\ROCit_P31\obj\Debug\WerkplaatsToevoegen.g.cs
+C:\Users\Billy Kuiper\source\repos\ROCit_P31\ROCit_P31\obj\Debug\WerkplaatsToevoegen.baml
+C:\Users\Billy Kuiper\source\repos\ROCit_P31\ROCit_P31\obj\Debug\ROCit_P31.csprojAssemblyReference.cache
+C:\Users\Billy Kuiper\source\repos\ROCit_P31\ROCit_P31\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\dave-\Downloads\ROCit_P31\ROCit_P31\bin\Debug\ROCit_P31.exe.config
+C:\Users\dave-\Downloads\ROCit_P31\ROCit_P31\bin\Debug\ROCit_P31.exe
+C:\Users\dave-\Downloads\ROCit_P31\ROCit_P31\bin\Debug\ROCit_P31.pdb
+C:\Users\dave-\Downloads\ROCit_P31\ROCit_P31\obj\Debug\ROCit_P31.csprojAssemblyReference.cache
+C:\Users\dave-\Downloads\ROCit_P31\ROCit_P31\obj\Debug\AddWorkplace.g.cs
+C:\Users\dave-\Downloads\ROCit_P31\ROCit_P31\obj\Debug\AutoToevoegen.g.cs
+C:\Users\dave-\Downloads\ROCit_P31\ROCit_P31\obj\Debug\Base.g.cs
+C:\Users\dave-\Downloads\ROCit_P31\ROCit_P31\obj\Debug\DealerOpvagenUC.g.cs
+C:\Users\dave-\Downloads\ROCit_P31\ROCit_P31\obj\Debug\kostenUC.g.cs
+C:\Users\dave-\Downloads\ROCit_P31\ROCit_P31\obj\Debug\MainWindow.g.cs
+C:\Users\dave-\Downloads\ROCit_P31\ROCit_P31\obj\Debug\OnderhoudsbeurtUC.g.cs
+C:\Users\dave-\Downloads\ROCit_P31\ROCit_P31\obj\Debug\Overizicht_Lease_Auto.g.cs
+C:\Users\dave-\Downloads\ROCit_P31\ROCit_P31\obj\Debug\PersoneelToevoegen.g.cs
+C:\Users\dave-\Downloads\ROCit_P31\ROCit_P31\obj\Debug\welkomUC.g.cs
+C:\Users\dave-\Downloads\ROCit_P31\ROCit_P31\obj\Debug\WerkplaatsToevoegen.g.cs
+C:\Users\dave-\Downloads\ROCit_P31\ROCit_P31\obj\Debug\App.g.cs
+C:\Users\dave-\Downloads\ROCit_P31\ROCit_P31\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\dave-\Downloads\ROCit_P31\ROCit_P31\obj\Debug\ROCit_P31_MarkupCompile.cache
+C:\Users\dave-\Downloads\ROCit_P31\ROCit_P31\obj\Debug\ROCit_P31_MarkupCompile.lref
+C:\Users\dave-\Downloads\ROCit_P31\ROCit_P31\obj\Debug\AddWorkplace.baml
+C:\Users\dave-\Downloads\ROCit_P31\ROCit_P31\obj\Debug\AutoToevoegen.baml
+C:\Users\dave-\Downloads\ROCit_P31\ROCit_P31\obj\Debug\Base.baml
+C:\Users\dave-\Downloads\ROCit_P31\ROCit_P31\obj\Debug\DealerOpvagenUC.baml
+C:\Users\dave-\Downloads\ROCit_P31\ROCit_P31\obj\Debug\kostenUC.baml
+C:\Users\dave-\Downloads\ROCit_P31\ROCit_P31\obj\Debug\MainWindow.baml
+C:\Users\dave-\Downloads\ROCit_P31\ROCit_P31\obj\Debug\OnderhoudsbeurtUC.baml
+C:\Users\dave-\Downloads\ROCit_P31\ROCit_P31\obj\Debug\Overizicht_Lease_Auto.baml
+C:\Users\dave-\Downloads\ROCit_P31\ROCit_P31\obj\Debug\PersoneelToevoegen.baml
+C:\Users\dave-\Downloads\ROCit_P31\ROCit_P31\obj\Debug\welkomUC.baml
+C:\Users\dave-\Downloads\ROCit_P31\ROCit_P31\obj\Debug\WerkplaatsToevoegen.baml
+C:\Users\dave-\Downloads\ROCit_P31\ROCit_P31\obj\Debug\ROCit_P31.g.resources
+C:\Users\dave-\Downloads\ROCit_P31\ROCit_P31\obj\Debug\ROCit_P31.Properties.Resources.resources
+C:\Users\dave-\Downloads\ROCit_P31\ROCit_P31\obj\Debug\ROCit_P31.csproj.GenerateResource.cache
+C:\Users\dave-\Downloads\ROCit_P31\ROCit_P31\obj\Debug\ROCit_P31.csproj.CoreCompileInputs.cache
+C:\Users\dave-\Downloads\ROCit_P31\ROCit_P31\obj\Debug\ROCit_P31.exe
+C:\Users\dave-\Downloads\ROCit_P31\ROCit_P31\obj\Debug\ROCit_P31.pdb

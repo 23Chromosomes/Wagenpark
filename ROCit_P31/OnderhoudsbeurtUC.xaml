@@ -1,0 +1,37 @@
+﻿<UserControl x:Class="ROCit_P31.OnderhoudsbeurtUC"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ROCit_P31"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Label Content="Onderhoudsbeurt" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontFamily="Trebuchet MS" Foreground="White"/>
+        <Label Content="Beurtnaam:" HorizontalAlignment="Left" Margin="21,55,0,0" VerticalAlignment="Top" FontFamily="Trebuchet MS" Foreground="White"/>
+        <Label Content="Prijs:" HorizontalAlignment="Left" Margin="56,86,0,0" VerticalAlignment="Top" FontFamily="Trebuchet MS" Foreground="White"/>
+        <Label Content="Omschrijving:" HorizontalAlignment="Left" Margin="10,117,0,0" VerticalAlignment="Top" FontFamily="Trebuchet MS" Foreground="White"/>
+        <Label Content="Auto:" HorizontalAlignment="Left" Margin="43,267,0,0" VerticalAlignment="Top" FontFamily="Trebuchet MS" Foreground="White"/>
+        <TextBox x:Name="tbxbeurtnaam" HorizontalAlignment="Left" Height="23" Margin="101,61,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="193"/>
+        <TextBox x:Name="tbxprijs" HorizontalAlignment="Left" Height="23" Margin="101,89,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="134" TextChanged="Tbxprijs_TextChanged"/>
+        <TextBox x:Name="tbxomschrijving" HorizontalAlignment="Left" Height="99" Margin="101,126,0,0" TextWrapping="Wrap"  AcceptsReturn="True" VerticalScrollBarVisibility="Visible" VerticalAlignment="Top" Width="221"/>
+        <ComboBox x:Name="cbxauto" HorizontalAlignment="Left" SelectedValuePath="autoId" Margin="101,270,0,0" VerticalAlignment="Top" Width="120" DisplayMemberPath="kenteken"/>
+        <Button x:Name="btnOpslaanBeurt" Content="Opslaan" HorizontalAlignment="Left" Margin="101,351,0,0" VerticalAlignment="Top" Width="221" Click="BtnOpslaanBeurt_Click" Height="32" FontFamily="Trebuchet MS" Foreground="White" Background="#FFFF8900" BorderBrush="White" BorderThickness="3"/>
+        <DataGrid x:Name="dgBeurten" Margin="327,43,10,21.6" AutoGenerateColumns="False" FontFamily="Trebuchet MS">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding beurtnaam}" ClipboardContentBinding="{x:Null}" Header="Naam"/>
+                <DataGridTextColumn Binding="{Binding kosten}" ClipboardContentBinding="{x:Null}" Header="Prijs"/>
+                <DataGridTextColumn Binding="{Binding uitvoerdatum}" ClipboardContentBinding="{x:Null}" Header="Uitvoerdatum"/>
+                <DataGridTextColumn Binding="{Binding auto.kenteken}" ClipboardContentBinding="{x:Null}" Header="Auto"/>
+                <DataGridTextColumn Binding="{Binding werkplaat.werkplaatsnaam}" ClipboardContentBinding="{x:Null}" Header="Werkplaats"/>
+                <DataGridTextColumn Binding="{Binding werkplaat.bedrijfsnaam}" ClipboardContentBinding="{x:Null}" Header="Werkplaats Bedrijf"/>
+                <DataGridTextColumn Binding="{Binding omschrijving}" ClipboardContentBinding="{x:Null}" Header="Omschrijving"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Label Content="Datum:" HorizontalAlignment="Left" Margin="33,236,0,0" VerticalAlignment="Top" FontFamily="Trebuchet MS" Foreground="White"/>
+        <DatePicker x:Name="dpUitvoerdatum" HorizontalAlignment="Left" Margin="101,240,0,0" VerticalAlignment="Top" SelectedDateChanged="DpUitvoerdatum_SelectedDateChanged" RenderTransformOrigin="0.039,0.625" Width="120" Height="22"/>
+        <Label Content="Werkplaats:" HorizontalAlignment="Left" Margin="11,298,0,0" VerticalAlignment="Top" FontFamily="Trebuchet MS" Foreground="White"/>
+        <ComboBox x:Name="cbxWerkplaats" HorizontalAlignment="Left" Margin="101,300,0,0" VerticalAlignment="Top" Width="120" SelectedValuePath="werkplaatsId" DisplayMemberPath="werkplaatsnaam"/>
+
+    </Grid>
+</UserControl>

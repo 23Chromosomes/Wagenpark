@@ -1,0 +1,63 @@
+﻿<Window x:Class="ROCit_P31.Base"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ROCit_P31"
+        mc:Ignorable="d"
+        Title="Base" Height="600" Width="1000">
+    <Grid>
+        <Border CornerRadius="5" BorderBrush="Gray" Background="#FF0043FF" BorderThickness="2" DockPanel.Dock="Top">
+            <StackPanel HorizontalAlignment="Left" Height="372" Margin="10.4,38.4,0,0" VerticalAlignment="Top" Width="242">
+                <Button x:Name="btnOverzicht" Content="Overzicht Lease auto's" Height="41" Margin="0,0,-0.4,0" Click="BtnOverzicht_Click" Background="#FFFF8900" BorderBrush="White" OpacityMask="White" Foreground="White" BorderThickness="3"/>
+                <Button x:Name="btnleasetoevoegen" Content="Lease auto toevoegen" Height="41" Margin="0,0,-0.4,0" Click="Btnleasetoevoegen_Click" Background="#FFFF8900" BorderBrush="White" Foreground="White" BorderThickness="3"/>
+                <Button x:Name="btnkosten" Content="Kosten" Height="41" Margin="0,0,-0.4,0" Click="Btnkosten_Click" Background="#FFFF8900" BorderBrush="White" Foreground="White" BorderThickness="3"/>
+                <Button x:Name="btnOnderhoudToevoegen" Content="Onderhoudsbeurt Toevoegen" Height="41" Margin="0,0,-0.4,0" Click="BtnOnderhoudToevoegen_Click" Background="#FFFF8900" BorderBrush="White" Foreground="White" BorderThickness="3"/>
+                <Button x:Name="btnPersoneel" Content="Personeel" Height="41" Margin="0,0,-0.4,0" Click="BtnPersoneel_Click" Background="#FFFF8900" BorderBrush="White" Foreground="White" BorderThickness="3"/>
+                <Button x:Name="btnDealerZoeken" Content="Dealer Opvragen" Height="41" Click="BtnDealerZoeken_Click" Background="#FFFF8900" BorderBrush="White" Foreground="White" BorderThickness="3"/>
+                <Button x:Name="btnDealerToevoegen" Content="Dealer Toevoegen" Height="41" Click="BtnDealerToevoegen_Click_1" Background="#FFFF8900" BorderBrush="White" Foreground="White" BorderThickness="3"/>
+                <Button x:Name="btnWerkplaatsToevoegen" Content="Werkplaats Toevoegen" Height="41" Click="BtnWerkplaatsToevoegen_Click" Background="#FFFF8900" BorderBrush="White" Foreground="White" BorderThickness="3"/>
+            </StackPanel>
+        </Border>
+        <Frame x:Name="mainframe" Content="Frame" Margin="257,41,9.6,51.4" RenderTransformOrigin="0.338,0.357" NavigationUIVisibility="Hidden"/>
+        <Button x:Name="btnUitloggen" Content="Uitloggen" HorizontalAlignment="Left" Margin="10,519,0,0" VerticalAlignment="Top" Width="242" Height="41" Click="BtnUitloggen_Click" Background="#FFFF8900" BorderBrush="White" Foreground="White" BorderThickness="3"/>
+        <!--Label x:Name="slideLabel" Content="Label" HorizontalAlignment="Left" Margin="182,10,0,0" VerticalAlignment="Top"/-->
+        <StackPanel Orientation="Horizontal" x:Name="stack" Height="41" VerticalAlignment="Top" Margin="0,0,9.6,0">
+            <StackPanel.Resources>
+                <local:NegatingConverter x:Key="NegatingConverter" />
+                <Storyboard x:Key="slide">
+                    <DoubleAnimation From="0" To="{Binding Width, ElementName=canvas}" Duration="00:00:10"
+                      Storyboard.TargetProperty="X"
+                      Storyboard.TargetName="transferCurreny"
+                      RepeatBehavior="Forever"/>
+                </Storyboard>
+            </StackPanel.Resources>
+            <StackPanel.RenderTransform>
+                <TranslateTransform x:Name="transferCurreny" X="0"/>
+            </StackPanel.RenderTransform>
+            <StackPanel.Triggers>
+                <EventTrigger RoutedEvent="StackPanel.Loaded">
+                    <BeginStoryboard Storyboard="{StaticResource slide}" />
+                </EventTrigger>
+                <EventTrigger RoutedEvent="StackPanel.SizeChanged">
+                    <BeginStoryboard Storyboard="{StaticResource slide}" />
+                </EventTrigger>
+            </StackPanel.Triggers>
+            <Canvas x:Name="canvas" Width="{Binding ActualWidth, ElementName=stack}">
+                <TextBlock Text="StackOverflow" FontSize="25"  x:Name="txtKron" Canvas.Left="0"/>
+                <TextBlock Text="{Binding Text, ElementName=txtKron}" FontSize="25" Canvas.Left="{Binding Width, ElementName=canvas, Converter={StaticResource NegatingConverter}}"/>
+
+            </Canvas>
+        </StackPanel>
+        <Separator Canvas.Left="10" Margin="10,6,9.6,501.4" Canvas.Top="10" Width="974" RenderTransformOrigin="0.5,0.5" Background="White">
+            <Separator.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleX="0.754"/>
+                    <RotateTransform/>
+                    <TranslateTransform X="0.52"/>
+                </TransformGroup>
+            </Separator.RenderTransform>
+        </Separator>
+    </Grid>
+</Window>

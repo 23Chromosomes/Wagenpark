@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="ROCitP31" Class="DataLinQDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=(local)\SQLEXPRESS;Initial Catalog=ROCitP31;Integrated Security=True;Pooling=False" SettingsObjectName="ROCit_P31.Properties.Settings" SettingsPropertyName="ROCitP31ConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.auto" Member="autos">
+    <Type Name="auto">
+      <Column Name="autoId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="merk" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="kenteken" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="kleur" Type="System.String" DbType="VarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="personeelId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="dealerId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="auto_onderhoud" Member="onderhouds" ThisKey="autoId" OtherKey="autoId" Type="onderhoud" />
+      <Association Name="dealer_auto" Member="dealer" ThisKey="dealerId" OtherKey="dealerId" Type="dealer" IsForeignKey="true" />
+      <Association Name="personeel_auto" Member="personeel" ThisKey="personeelId" OtherKey="personeelId" Type="personeel" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.dealer" Member="dealers">
+    <Type Name="dealer">
+      <Column Name="dealerId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="dealerNaam" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="dealer_auto" Member="autos" ThisKey="dealerId" OtherKey="dealerId" Type="auto" />
+    </Type>
+  </Table>
+  <Table Name="dbo.gebruiker" Member="gebruikers">
+    <Type Name="gebruiker">
+      <Column Name="userId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="naam" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="wachtwoord" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="[key]" Member="key" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.onderhoud" Member="onderhouds">
+    <Type Name="onderhoud">
+      <Column Name="onderhoudId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="beurtnaam" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="kosten" Type="System.Decimal" DbType="Decimal(18,2) NOT NULL" CanBeNull="false" />
+      <Column Name="omschrijving" Type="System.String" DbType="VarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="autoId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="uitvoerdatum" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="werkplaatsId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="auto_onderhoud" Member="auto" ThisKey="autoId" OtherKey="autoId" Type="auto" IsForeignKey="true" />
+      <Association Name="werkplaat_onderhoud" Member="werkplaat" ThisKey="werkplaatsId" OtherKey="werkplaatsId" Type="werkplaat" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.personeel" Member="personeels">
+    <Type Name="personeel">
+      <Column Name="personeelId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="naam" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="personeelsnumer" Type="System.String" DbType="VarChar(6) NOT NULL" CanBeNull="false" />
+      <Association Name="personeel_auto" Member="autos" ThisKey="personeelId" OtherKey="personeelId" Type="auto" />
+    </Type>
+  </Table>
+  <Table Name="dbo.werkplaats" Member="werkplaats">
+    <Type Name="werkplaat">
+      <Column Name="werkplaatsId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="bedrijfsnaam" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="werkplaatsnaam" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="werkplaat_onderhoud" Member="onderhouds" ThisKey="werkplaatsId" OtherKey="werkplaatsId" Type="onderhoud" />
+    </Type>
+  </Table>
+</Database>
