@@ -27,7 +27,7 @@ namespace ROCit_P31
         public MainWindow()
         {
             InitializeComponent();
-            if (!(db.DatabaseExists()))
+            if (!db.DatabaseExists())
             {
                 db.CreateDatabase();
             }

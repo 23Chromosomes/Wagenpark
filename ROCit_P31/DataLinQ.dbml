@@ -45,7 +45,7 @@
     <Type Name="personeel">
       <Column Name="personeelId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="naam" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
-      <Column Name="personeelsnumer" Type="System.String" DbType="VarChar(6) NOT NULL" CanBeNull="false" />
+      <Column Name="personeelsnummer" Storage="_personeelsnumer" Type="System.String" DbType="VarChar(6) NOT NULL" CanBeNull="false" />
       <Association Name="personeel_auto" Member="autos" ThisKey="personeelId" OtherKey="personeelId" Type="auto" />
     </Type>
   </Table>
