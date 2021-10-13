@@ -17,24 +17,6 @@
             <DataGrid.Columns>
                 <DataGridTextColumn Binding="{Binding naam}" ClipboardContentBinding="{x:Null}" Header="Naam"/>
                 <DataGridTextColumn Binding="{Binding personeelsnumer}" ClipboardContentBinding="{x:Null}" Header="Personeelsnummer"/>
-                <DataGridTemplateColumn>
-                    <DataGridTemplateColumn.CellTemplate>
-                        <DataTemplate>
-                            <StackPanel>
-                                <Button x:Name="btnDelete" Content="DEL" Click="btnDelete_Click"/>
-                            </StackPanel>
-                        </DataTemplate>
-                    </DataGridTemplateColumn.CellTemplate>
-                </DataGridTemplateColumn>
-                <DataGridTemplateColumn>
-                    <DataGridTemplateColumn.CellTemplate>
-                        <DataTemplate>
-                            <StackPanel>
-                                <Button x:Name="btnupdate" Content="upd" Click="btnupdate_Click"/>
-                            </StackPanel>
-                        </DataTemplate>
-                    </DataGridTemplateColumn.CellTemplate>
-                </DataGridTemplateColumn>
             </DataGrid.Columns>
         </DataGrid>
 

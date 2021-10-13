@@ -23,11 +23,11 @@ namespace ROCit_P31
                 pers.personeelsnumer = personeelnummer;
                 db.personeels.InsertOnSubmit(pers);
                 db.SubmitChanges();
-                return true;
+                return false;
             }
             catch
             {
-                return false;
+                return true;
             }
             
         }
