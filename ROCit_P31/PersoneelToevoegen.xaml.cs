@@ -30,11 +30,6 @@ namespace ROCit_P31
             dgPersoneel.ItemsSource = db.personeels.ToList();
         }
 
-        public void refreshDatagrid()
-        {
-            dgPersoneel.ItemsSource = db.personeels.ToList();
-        }
-
         private void BtnPersoneelOpslaan_Click(object sender, RoutedEventArgs e)
         {
             if(tbxPersoneelNaam.Text.Length == 0)
@@ -62,27 +57,6 @@ namespace ROCit_P31
                 }
             }
             dgPersoneel.ItemsSource = db.personeels.ToList();
-        }
-
-        private void btnDelete_Click(object sender, RoutedEventArgs e)
-        {
-            MessageBoxResult confirmResult = MessageBox.Show("Are you sure to delete this item ??", "Confirm Delete!!", MessageBoxButton.YesNo);
-
-            if (confirmResult == MessageBoxResult.Yes)
-            {
-                personeel personeelSelected = (personeel)dgPersoneel.SelectedItem;
-                db.personeels.DeleteOnSubmit(personeelSelected);
-                db.SubmitChanges();
-                refreshDatagrid();
-            }
-        }
-
-        private void btnupdate_Click(object sender, RoutedEventArgs e)
-        {
-            personeel personeelSelected = (personeel)dgPersoneel.SelectedItem;
-            personeelUpdate personeelupdate = new personeelUpdate(personeelSelected, db);
-
-            personeelupdate.Show();
         }
     }
 }
