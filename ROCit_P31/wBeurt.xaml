@@ -20,5 +20,6 @@
         <DatePicker x:Name="dpUitvoerdatum" HorizontalAlignment="Left" Margin="101,240,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.039,0.625" Width="120" Height="22"/>
         <Label Content="Werkplaats:" HorizontalAlignment="Left" Margin="11,298,0,0" VerticalAlignment="Top" FontFamily="Trebuchet MS" Foreground="#FF020202"/>
         <ComboBox x:Name="cbxWerkplaats" HorizontalAlignment="Left" Margin="101,300,0,0" VerticalAlignment="Top" Width="120" SelectedValuePath="werkplaatsId" DisplayMemberPath="werkplaatsnaam"/>
+        <Image Margin="327,0,9.6,0" Source="Image4.png" Stretch="Fill"/>
     </Grid>
 </Window>
