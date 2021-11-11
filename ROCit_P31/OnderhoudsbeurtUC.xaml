@@ -26,7 +26,25 @@
                 <DataGridTextColumn Binding="{Binding werkplaat.werkplaatsnaam}" ClipboardContentBinding="{x:Null}" Header="Werkplaats"/>
                 <DataGridTextColumn Binding="{Binding werkplaat.bedrijfsnaam}" ClipboardContentBinding="{x:Null}" Header="Werkplaats Bedrijf"/>
                 <DataGridTextColumn Binding="{Binding omschrijving}" ClipboardContentBinding="{x:Null}" Header="Omschrijving"/>
+                <DataGridTemplateColumn>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button x:Name="btnVerwijder" Content="Verwijderen" Click="btnVerwijderen_Click"/>
+                    
+                        </DataTemplate>
+                      
+
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button x:Name="btnWijzigBeurt" Content="Wijzig" Click="btnWijzigBeurt_Click"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
             </DataGrid.Columns>
+            
         </DataGrid>
         <Label Content="Datum:" HorizontalAlignment="Left" Margin="33,236,0,0" VerticalAlignment="Top" FontFamily="Trebuchet MS" Foreground="White"/>
         <DatePicker x:Name="dpUitvoerdatum" HorizontalAlignment="Left" Margin="101,240,0,0" VerticalAlignment="Top" SelectedDateChanged="DpUitvoerdatum_SelectedDateChanged" RenderTransformOrigin="0.039,0.625" Width="120" Height="22"/>

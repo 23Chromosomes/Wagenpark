@@ -1,0 +1,25 @@
+﻿<Window x:Class="ROCit_P31.wBeurt"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ROCit_P31"
+        mc:Ignorable="d"
+        Title="wBeurt" Height="450" Width="800">
+    <Grid>
+        <Label Content="Beurtnaam:" HorizontalAlignment="Left" Margin="21,55,0,0" VerticalAlignment="Top" FontFamily="Trebuchet MS" Foreground="Black"/>
+        <Label Content="Prijs:" HorizontalAlignment="Left" Margin="56,86,0,0" VerticalAlignment="Top" FontFamily="Trebuchet MS" Foreground="Black"/>
+        <Label Content="Omschrijving:" HorizontalAlignment="Left" Margin="10,117,0,0" VerticalAlignment="Top" FontFamily="Trebuchet MS" Foreground="Black"/>
+        <Label Content="Auto:" HorizontalAlignment="Left" Margin="43,267,0,0" VerticalAlignment="Top" FontFamily="Trebuchet MS" Foreground="Black"/>
+        <TextBox x:Name="tbxbeurtnaam" HorizontalAlignment="Left" Height="23" Margin="101,61,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="193"/>
+        <TextBox x:Name="tbxprijs" HorizontalAlignment="Left" Height="23" Margin="101,89,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="134"/>
+        <TextBox x:Name="tbxomschrijving" HorizontalAlignment="Left" Height="99" Margin="101,126,0,0" TextWrapping="Wrap"  AcceptsReturn="True" VerticalScrollBarVisibility="Visible" VerticalAlignment="Top" Width="221"/>
+        <ComboBox x:Name="cbxauto" HorizontalAlignment="Left" SelectedValuePath="autoId" Margin="101,270,0,0" VerticalAlignment="Top" Width="120" DisplayMemberPath="kenteken"/>
+        <Button x:Name="btnWijzigBeurt" Content="Wijzig" HorizontalAlignment="Left" Margin="101,351,0,0" VerticalAlignment="Top" Width="221" Height="32" FontFamily="Trebuchet MS" Foreground="White" Background="#FFFF8900" BorderBrush="White" BorderThickness="3" Click="btnWijzigBeurt_Click"/>
+        <Label Content="Datum:" HorizontalAlignment="Left" Margin="33,236,0,0" VerticalAlignment="Top" FontFamily="Trebuchet MS" Foreground="Black"/>
+        <DatePicker x:Name="dpUitvoerdatum" HorizontalAlignment="Left" Margin="101,240,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.039,0.625" Width="120" Height="22"/>
+        <Label Content="Werkplaats:" HorizontalAlignment="Left" Margin="11,298,0,0" VerticalAlignment="Top" FontFamily="Trebuchet MS" Foreground="#FF020202"/>
+        <ComboBox x:Name="cbxWerkplaats" HorizontalAlignment="Left" Margin="101,300,0,0" VerticalAlignment="Top" Width="120" SelectedValuePath="werkplaatsId" DisplayMemberPath="werkplaatsnaam"/>
+        <Image Margin="327,0,9.6,0" Source="Image4.png" Stretch="Fill"/>
+    </Grid>
+</Window>
