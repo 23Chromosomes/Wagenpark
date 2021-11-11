@@ -112,7 +112,7 @@ namespace ROCit_P31
 
         private void btnDelete_Click(object sender, RoutedEventArgs e)
         {
-            MessageBoxResult confirmResult = MessageBox.Show("Are you sure to delete this item ??", "Confirm Delete!!", MessageBoxButton.YesNo);
+            MessageBoxResult confirmResult = MessageBox.Show("Weet je zeker dat je dit wilt verwijderen?", "Verwijder bevestiging", MessageBoxButton.YesNo);
 
             if (confirmResult == MessageBoxResult.Yes)
             {
