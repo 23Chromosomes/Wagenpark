@@ -61,6 +61,9 @@
     <Compile Include="AddWorkplace.xaml.cs">
       <DependentUpon>AddWorkplace.xaml</DependentUpon>
     </Compile>
+    <Compile Include="AutoUpdate.xaml.cs">
+      <DependentUpon>AutoUpdate.xaml</DependentUpon>
+    </Compile>
     <Compile Include="DealerController.cs" />
     <Compile Include="DealerOpvagenUC.xaml.cs">
       <DependentUpon>DealerOpvagenUC.xaml</DependentUpon>
@@ -77,6 +80,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="AutoToevoegen.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AutoUpdate.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

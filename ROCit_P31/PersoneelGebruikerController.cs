@@ -20,7 +20,7 @@ namespace ROCit_P31
             {
                 personeel pers = new personeel();
                 pers.naam = naam;
-                pers.personeelsnumer = personeelnummer;
+                pers.personeelsnummer = personeelnummer;
                 db.personeels.InsertOnSubmit(pers);
                 db.SubmitChanges();
                 return false;

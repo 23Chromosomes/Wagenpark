@@ -20,7 +20,7 @@ namespace ROCit_P31
         }
         public bool autoOpslaan(string merk, string kleur, string kenteken, int personeelId, int dealerId)
         {
-            return false;
+            return true;
         }
         public bool beurtOpslaan(string beurtnaam, decimal prijs, string omschijving
             , DateTime datum, int autoId, int werkplaatsId)

@@ -967,7 +967,7 @@ namespace ROCit_P31
 		
 		private string _naam;
 		
-		private string _personeelsnummer;
+		private string _personeelsnumer;
 		
 		private EntitySet<auto> _autos;
 		
@@ -1029,20 +1029,20 @@ namespace ROCit_P31
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_personeelsnummer", DbType="VarChar(6) NOT NULL", CanBeNull=false)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_personeelsnumer", DbType="VarChar(6) NOT NULL", CanBeNull=false)]
 		public string personeelsnummer
 		{
 			get
 			{
-				return this._personeelsnummer;
+				return this._personeelsnumer;
 			}
 			set
 			{
-				if ((this._personeelsnummer != value))
+				if ((this._personeelsnumer != value))
 				{
 					this.OnpersoneelsnummerChanging(value);
 					this.SendPropertyChanging();
-					this._personeelsnummer = value;
+					this._personeelsnumer = value;
 					this.SendPropertyChanged("personeelsnummer");
 					this.OnpersoneelsnummerChanged();
 				}
