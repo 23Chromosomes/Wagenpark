@@ -33,10 +33,16 @@ namespace ROCit_P31
 
         }
 
+        public void refreshAutoGrid() {
+            dgAutos.ItemsSource = null;
+            dgAutos.ItemsSource = db.autos.ToList();
+        }
+
         private void BtnOpslaan_Click(object sender, RoutedEventArgs e)
         {
             int persId = Convert.ToInt32(cbxPersoneel.SelectedValue);
             int dealerId = Convert.ToInt32(cbxDealer.SelectedValue);
+
             if(tbxMerk.Text.Length == 0)
             {
                 MessageBox.Show("Er is geen merk ingevuld!");
@@ -69,10 +75,19 @@ namespace ROCit_P31
                             {
                                 if (leaseC.autoOpslaan(tbxMerk.Text, tbxKleur.Text, tbxKenteken.Text, persId, dealerId) == true)
                                 {
+                                    auto newAuto = new auto();
+                                    newAuto.kenteken = tbxKenteken.Text;
+                                    newAuto.kleur = tbxKleur.Text;
+                                    newAuto.merk = tbxMerk.Text;
+
+
+                                    newAuto.personeelId = (int)cbxPersoneel.SelectedValue;
+                                    newAuto.dealerId = (int)cbxDealer.SelectedValue;
+
+                                    db.autos.InsertOnSubmit(newAuto);
+                                    db.SubmitChanges();
+                                    refreshAutoGrid();
                                     MessageBox.Show("Opslaan Gelukt!");
-                                    tbxKenteken.Text = string.Empty;
-                                    tbxKleur.Text = string.Empty;
-                                    tbxMerk.Text = string.Empty;
                                 }
                             }
                         }
@@ -85,6 +100,27 @@ namespace ROCit_P31
 
             
             
+        }
+
+        private void btnUpdate_Click(object sender, RoutedEventArgs e)
+        {
+            auto selectedAuto = (auto)dgAutos.SelectedItem;
+            AutoUpdate updateauto = new AutoUpdate(selectedAuto, db);
+
+            updateauto.Show();
+        }
+
+        private void btnDelete_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBoxResult confirmResult = MessageBox.Show("Weet je zeker dat je dit wilt verwijderen?", "Verwijder bevestiging", MessageBoxButton.YesNo);
+
+            if (confirmResult == MessageBoxResult.Yes)
+            {
+                auto selectedAuto = (auto)dgAutos.SelectedItem;
+                db.autos.DeleteOnSubmit(selectedAuto);
+                db.SubmitChanges();
+                refreshAutoGrid();
+            }
         }
     }
 }

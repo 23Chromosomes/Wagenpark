@@ -8,27 +8,45 @@
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
         <Label Content="Auto's Toevoegen" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontFamily="Trebuchet MS" Foreground="White"/>
-        <DataGrid x:Name="dgAutos" Margin="332,10,10,9.6" AutoGenerateColumns="False" FontFamily="Trebuchet MS">
+        <DataGrid x:Name="dgAutos" Margin="222,10,10,10" AutoGenerateColumns="False" FontFamily="Trebuchet MS" CanUserAddRows="False">
             <DataGrid.Columns>
                 <DataGridTextColumn Binding="{Binding merk}" ClipboardContentBinding="{x:Null}" Header="Merk"/>
                 <DataGridTextColumn Binding="{Binding kleur}" ClipboardContentBinding="{x:Null}" Header="Kleur"/>
                 <DataGridTextColumn Binding="{Binding kenteken}" ClipboardContentBinding="{x:Null}" Header="Kenteken"/>
                 <DataGridTextColumn Binding="{Binding personeel.naam}" ClipboardContentBinding="{x:Null}" Header="Personeel"/>
-                <DataGridTextColumn Binding="{Binding onderhoudId}" ClipboardContentBinding="{x:Null}" Header="Aantal Onderhoudsbeurten"/>
-
+                <DataGridTextColumn Binding="{Binding dealer.dealerNaam}" ClipboardContentBinding="{x:Null}" Header="Dealer"/>
+                <DataGridTextColumn Binding="{Binding onderhoudId}" ClipboardContentBinding="{x:Null}" Header="Onderhoudsbeurten"/>
+                <DataGridTemplateColumn Header="Update">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <StackPanel>
+                                <Button x:Name="btnUpdate" Content="✏" Click="btnUpdate_Click"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn Header="Delete">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <StackPanel>
+                                <Button x:Name="btnDelete" Content="🗑" Click="btnDelete_Click"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
             </DataGrid.Columns>
         </DataGrid>
-        <Label Content="Merk" HorizontalAlignment="Left" Margin="77,44,0,0" VerticalAlignment="Top" RenderTransformOrigin="-2.866,0.262" FontFamily="Trebuchet MS" Foreground="White"/>
-        <Label Content="Kleur" HorizontalAlignment="Left" Margin="77,77,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.873,-4.386" FontFamily="Trebuchet MS" Foreground="White"/>
-        <Label Content="Kenteken" HorizontalAlignment="Left" Margin="55,103,0,0" VerticalAlignment="Top" FontFamily="Trebuchet MS" Foreground="White"/>
-        <TextBox x:Name="tbxMerk" HorizontalAlignment="Left" Height="23" Margin="147,44,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="tbxKleur" HorizontalAlignment="Left" Height="23" Margin="147,75,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="tbxKenteken" HorizontalAlignment="Left" Height="23" Margin="147,103,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Button x:Name="btnOpslaan" Content="Opslaan" HorizontalAlignment="Left" Margin="192,187,0,0" VerticalAlignment="Top" Width="75" Click="BtnOpslaan_Click" FontFamily="Trebuchet MS" Foreground="White" Background="#FFFF8900" BorderBrush="White" BorderThickness="3"/>
-        <ComboBox x:Name="cbxPersoneel" HorizontalAlignment="Left" Margin="147,131,0,0" VerticalAlignment="Top" Width="120" DisplayMemberPath="naam" SelectedValuePath="personeelId"/>
-        <Label Content="Personeel" HorizontalAlignment="Left" Margin="48,131,0,0" VerticalAlignment="Top" FontFamily="Trebuchet MS" Foreground="White"/>
-        <Label Content="Dealer" HorizontalAlignment="Left" Margin="64,162,0,0" VerticalAlignment="Top" FontFamily="Trebuchet MS" Foreground="White"/>
-        <ComboBox x:Name="cbxDealer" HorizontalAlignment="Left" Margin="147,160,0,0" VerticalAlignment="Top" Width="120" DisplayMemberPath="dealerNaam" SelectedValuePath="dealerId"/>
+        <Label Content="Merk" HorizontalAlignment="Left" Margin="10,39,0,0" VerticalAlignment="Top" RenderTransformOrigin="-2.866,0.262" FontFamily="Trebuchet MS" Foreground="White"/>
+        <Label Content="Kleur" HorizontalAlignment="Left" Margin="10,70,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.873,-4.386" FontFamily="Trebuchet MS" Foreground="White"/>
+        <Label Content="Kenteken" HorizontalAlignment="Left" Margin="10,98,0,0" VerticalAlignment="Top" FontFamily="Trebuchet MS" Foreground="White"/>
+        <TextBox x:Name="tbxMerk" HorizontalAlignment="Left" Height="23" Margin="84,41,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="tbxKleur" HorizontalAlignment="Left" Height="23" Margin="84,72,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="tbxKenteken" HorizontalAlignment="Left" Height="23" Margin="84,100,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="btnOpslaan" Content="Opslaan" HorizontalAlignment="Left" Margin="129,184,0,0" VerticalAlignment="Top" Width="75" Click="BtnOpslaan_Click" FontFamily="Trebuchet MS" Foreground="White" Background="#FFFF8900" BorderBrush="White" BorderThickness="3"/>
+        <ComboBox x:Name="cbxPersoneel" HorizontalAlignment="Left" Margin="84,128,0,0" VerticalAlignment="Top" Width="120" DisplayMemberPath="naam" SelectedValuePath="personeelId"/>
+        <Label Content="Personeel" HorizontalAlignment="Left" Margin="10,126,0,0" VerticalAlignment="Top" FontFamily="Trebuchet MS" Foreground="White"/>
+        <Label Content="Dealer" HorizontalAlignment="Left" Margin="10,155,0,0" VerticalAlignment="Top" FontFamily="Trebuchet MS" Foreground="White"/>
+        <ComboBox x:Name="cbxDealer" HorizontalAlignment="Left" Margin="84,157,0,0" VerticalAlignment="Top" Width="120" DisplayMemberPath="dealerNaam" SelectedValuePath="dealerId"/>
 
 
     </Grid>

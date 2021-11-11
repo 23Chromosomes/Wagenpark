@@ -27,6 +27,15 @@ namespace ROCit_P31
         public MainWindow()
         {
             InitializeComponent();
+            if (!db.DatabaseExists())
+            {
+                db.CreateDatabase();
+            }
+            else
+            {
+                Console.WriteLine("DB Already Exists");
+            }
+
             loginC = new loginController(db);
             leaseC = new LeaseAutoController(db);
         }
