@@ -71,6 +71,9 @@
     <Compile Include="personeelUpdate.xaml.cs">
       <DependentUpon>personeelUpdate.xaml</DependentUpon>
     </Compile>
+    <Compile Include="wBeurt.xaml.cs">
+      <DependentUpon>wBeurt.xaml</DependentUpon>
+    </Compile>
     <Compile Include="welkomUC.xaml.cs">
       <DependentUpon>welkomUC.xaml</DependentUpon>
     </Compile>
@@ -145,6 +148,10 @@
     <Page Include="personeelUpdate.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="wBeurt.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="welkomUC.xaml">
       <SubType>Designer</SubType>

@@ -30,13 +30,13 @@ namespace ROCit_P31
             this.db = db;
 
             PersoneelNaam.Text = hetPersoneel.naam;
-            PersoneelNummer.Text = hetPersoneel.personeelsnumer.ToString();
+            PersoneelNummer.Text = hetPersoneel.personeelsnummer.ToString();
         }
 
         private void updateBtn_Click(object sender, RoutedEventArgs e)
         {
             hetPersoneel.naam = PersoneelNaam.Text.ToString();
-            hetPersoneel.personeelsnumer = PersoneelNummer.Text.ToString();
+            hetPersoneel.personeelsnummer = PersoneelNummer.Text.ToString();
             db.SubmitChanges();
             this.Close();
         }
